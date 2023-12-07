@@ -54,7 +54,7 @@
             <label class="label">Hoja de Destino</label>
             <div class="control">
                 <div class="select">
-                    <select name="HojaDestino">
+                    <select name="hojaDestino">
                         <option value="Atendencia">Atendencia</option>
                         <option value="Produccion">Produccion</option>
                         <!-- Agrega más opciones según sea necesario -->
@@ -131,10 +131,13 @@
             var formDataString = keyValuePairs.join("&");
 
             // Obtén la hoja de destino seleccionada
-            var hojaDestino = formData.get("HojaDestino");
+            var hojaDestino = formData.get("hojaDestino");
 
-            // Modifica la URL del script para incluir la hoja de destino
-            var scriptUrl = "https://script.google.com/macros/s/AKfycbyeLzSEJgfZnkjHldANcF7le2vwaKmt9EMbjJZFRhord6RcjTWi3Uw5L_U8QHWUlMaVow/exec?" + encodeURIComponent(hojaDestino);
+            console.log("hoja de Destino seleccionada:", hojaDestino);  // Agrega esta línea
+
+            // Modifica la URL del script para incluir la hoja de destino como parámetro de consulta
+var scriptUrl = "https://script.google.com/macros/s/AKfycbxiFVZF3nqCiXvKzhL7rqeSRyl4jkiz_0u6NmzjOdpdTbXvsiDCoZCSua13iUP9a8HfEw/exec?hojaDestino=" + encodeURIComponent(hojaDestino);
+
 
             fetch(
                 scriptUrl, // Usa la URL modificada
@@ -147,17 +150,30 @@
                     },
                 }
             )
-                .then(function (response) {
-                    // Resto del código...
-                })
-                .catch(function (error) {
-                    // Resto del código...
-                });
-        });
-    </script>
-</body>
-
-</html>
+            .then(function (data) {
+                // Display a success message
+                document.getElementById("message").textContent = "Data submitted successfully!";
+                document.getElementById("message").style.display = "block";
+                document.getElementById("message").style.backgroundColor = "green";
+                document.getElementById("message").style.color = "beige";
+                document.getElementById("submit-button").disabled = false;
+                document.getElementById("form").reset();
+      
+                setTimeout(function () {
+                  document.getElementById("message").textContent = "";
+                  document.getElementById("message").style.display = "none";
+                }, 2600);
+              })
+              .catch(function (error) {
+                // Handle errors, you can display an error message here
+                console.error(error);
+                document.getElementById("message").textContent = "An error occurred while submitting the form.";
+                document.getElementById("message").style.display = "block";
+              });
+          });
+        </script>
+      </body>
+      </html>
 
 
     
