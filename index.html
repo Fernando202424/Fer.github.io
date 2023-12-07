@@ -1,184 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-  <title>WarpShip Logistics</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <title>WarpShip Logistics</title>
 </head>
+
 <body>
-  <section class="hero is-primary is-bold">
-    <div class="hero-body">
-      <div class="container">
-        <h1 class="title">WarpShip Logistics</h1>
-      </div>
-    </div>
-  </section>
-  <form id="form" class="container m-4 pl-4" method="POST">
-    <div class="field">
-      <label class="label">Nombre</label>
-      <div class="control">
-        <div class="select">
-          <select name="Nombre">
-            <option value="" disabled selected>Selecciona un nombre</option>
-            <option value="Josue">Josue</option>
-            <option value="Erwin">Erwin</option>
-            <option value="Fabian">Fabian</option>
-            <option value="Fernando">Fernando</option>
-            <!-- Agrega más opciones según sea necesario -->
-          </select>
+    <section class="hero is-primary is-bold">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title">WarpShip Logistics</h1>
+            </div>
         </div>
-      </div>
-    </div>
-    
-    <div class="field">
-      <label class="label">Atendencia</label>
-      <div class="control">
-        <div class="select">
-          <select name="Atendencia">
-            <option value="" disabled selected>Selecciona Atendencia</option>
-            <option value="A Tiempo">A tiempo</option>
-            <option value="Tarde">Tarde</option>
-            <option value="Ausencia Sin Justificar">Ausencia sin justificar</option>
-            <option value="Ausencia Justificada">Ausencia Justificada</option>
-            <!-- Agrega más opciones según sea necesario -->
-          </select>
+    </section>
+    <form id="form" class="container m-4 pl-4" method="POST">
+        <div class="field">
+            <label class="label">Nombre</label>
+            <div class="control">
+                <div class="select">
+                    <select name="Nombre">
+                        <option value="" disabled selected>Selecciona un nombre</option>
+                        <option value="Josue">Josue</option>
+                        <option value="Erwin">Erwin</option>
+                        <option value="Fabian">Fabian</option>
+                        <option value="Fernando">Fernando</option>
+                        <!-- Agrega más opciones según sea necesario -->
+                    </select>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
 
-    <!-- Agrega un campo adicional para indicar la hoja de destino -->
-    <div class="field">
-      <label class="label">Hoja de Destino</label>
-      <div class="control">
-        <div class="select">
-          <select name="HojaDestino">
-            <option value="Atendencia">Atendencia</option>
-            <option value="Produccion">Produccion</option>
-            <!-- Agrega más opciones según sea necesario -->
-          </select>
+        <div class="field">
+            <label class="label">Atendencia</label>
+            <div class="control">
+                <div class="select">
+                    <select name="Atendencia">
+                        <option value="" disabled selected>Selecciona Atendencia</option>
+                        <option value="A Tiempo">A tiempo</option>
+                        <option value="Tarde">Tarde</option>
+                        <option value="Ausencia Sin Justificar">Ausencia sin justificar</option>
+                        <option value="Ausencia Justificada">Ausencia Justificada</option>
+                        <!-- Agrega más opciones según sea necesario -->
+                    </select>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
 
-    <div class="field">
-      <label class="label">Produccion</label>
-      <div class="control">
-        <input class="input" type="number" placeholder="Produccion" name="Produccion"/>
-      </div>
-    </div>
+        <!-- Agrega un campo adicional para indicar la hoja de destino -->
+        <div class="field">
+            <label class="label">Hoja de Destino</label>
+            <div class="control">
+                <div class="select">
+                    <select name="HojaDestino">
+                        <option value="Atendencia">Atendencia</option>
+                        <option value="Produccion">Produccion</option>
+                        <!-- Agrega más opciones según sea necesario -->
+                    </select>
+                </div>
+            </div>
+        </div>
 
-    <div class="field">
-      <label class="label">Incidencia</label>
-      <div class="control">
-        <input class="input" type="number" placeholder="Incidencia" name="Incidencia"/>
-      </div>
-    </div>
+        <div class="field">
+            <label class="label">Produccion</label>
+            <div class="control">
+                <input class="input" type="number" placeholder="Produccion" name="Produccion" />
+            </div>
+        </div>
 
-    <div class="field">
-      <label class="label">Fecha</label>
-      <div class="control">
-        <input class="input" type="date" placeholder="Fecha" name="Fecha"/>
-      </div>
-    </div>
+        <div class="field">
+            <label class="label">Incidencia</label>
+            <div class="control">
+                <input class="input" type="number" placeholder="Incidencia" name="Incidencia" />
+            </div>
+        </div>
 
-    <div class="field">
-      <label class="label">Cargo</label>
-      <div class="control">
-        <label class="radio">
-          <input type="radio" name="Cargo" value="Repartidor"/> Repartidor
-        </label>
-        <label class="radio">
-          <input type="radio" name="Cargo" value="Chofer"/> Chofer
-        </label>
-      </div>
-    </div>
+        <div class="field">
+            <label class="label">Fecha</label>
+            <div class="control">
+                <input class="input" type="date" placeholder="Fecha" name="Fecha" />
+            </div>
+        </div>
 
-    <div class="field">
-      <label class="label">Informacion Adicional</label>
-      <div class="control">
-        <textarea class="textarea" placeholder="Informacion Adicional" name="Notes"></textarea>
-      </div>
-    </div>
+        <div class="field">
+            <label class="label">Cargo</label>
+            <div class="control">
+                <label class="radio">
+                    <input type="radio" name="Cargo" value="Repartidor" /> Repartidor
+                </label>
+                <label class="radio">
+                    <input type="radio" name="Cargo" value="Chofer" /> Chofer
+                </label>
+            </div>
+        </div>
 
-    <div class="field is-grouped">
-      <div class="control">
-        <button class="button is-primary" type="submit" id="submit-button">Enviar</button>
-      </div>
-      <div class="control">
-        <button class="button is-danger">Cancelar</button>
-      </div>
-    </div>
-  </form>
+        <div class="field">
+            <label class="label">Informacion Adicional</label>
+            <div class="control">
+                <textarea class="textarea" placeholder="Informacion Adicional" name="Notes"></textarea>
+            </div>
+        </div>
 
-  <div id="message" style="display: none; margin: 20px; font-weight: bold; color: green; padding: 8px; background-color: beige; border-radius: 4px; border-color: aquamarine;"></div>
+        <div class="field is-grouped">
+            <div class="control">
+                <button class="button is-primary" type="submit" id="submit-button">Enviar</button>
+            </div>
+            <div class="control">
+                <button class="button is-danger">Cancelar</button>
+            </div>
+        </div>
+    </form>
 
-  <script>
-   // ... (tu código existente)
+    <div id="message" style="display: none; margin: 20px; font-weight: bold; color: green; padding: 8px; background-color: beige; border-radius: 4px; border-color: aquamarine;"></div>
 
-document.getElementById("form").addEventListener("submit", function (e) {
-    e.preventDefault();
-    document.getElementById("message").textContent = "Submitting..";
-    document.getElementById("message").style.display = "block";
-    document.getElementById("submit-button").disabled = true;
+    <script>
+        document.getElementById("form").addEventListener("submit", function (e) {
+            e.preventDefault();
+            document.getElementById("message").textContent = "Submitting..";
+            document.getElementById("message").style.display = "block";
+            document.getElementById("submit-button").disabled = true;
 
-    var formData = new FormData(this);
-    var keyValuePairs = [];
-    for (var pair of formData.entries()) {
-        keyValuePairs.push(pair[0] + "=" + pair[1]);
-    }
+            var formData = new FormData(this);
+            var keyValuePairs = [];
+            for (var pair of formData.entries()) {
+                keyValuePairs.push(pair[0] + "=" + pair[1]);
+            }
 
-    var formDataString = keyValuePairs.join("&");
+            var formDataString = keyValuePairs.join("&");
 
-    // Obtén la hoja de destino seleccionada
-    var hojaDestino = formData.get("HojaDestino");
+            // Obtén la hoja de destino seleccionada
+            var hojaDestino = formData.get("HojaDestino");
 
-    // Modifica la URL del script para incluir la hoja de destino
-    var scriptUrl = "https://script.google.com/macros/s/AKfycbwTqxESc0veWlQCYI5QqFfo0Qi-ebYk1HeNLVw7CNpW1kTDwLAcc4qDt-ZUSVBE6Xzuew/exec?" + encodeURIComponent(hojaDestino);
+            // Modifica la URL del script para incluir la hoja de destino
+            var scriptUrl = "https://script.google.com/macros/s/AKfycbwTqxESc0veWlQCYI5QqFfo0Qi-ebYk1HeNLVw7CNpW1kTDwLAcc4qDt-ZUSVBE6Xzuew/exec?" + encodeURIComponent(hojaDestino);
 
-    fetch(
-        scriptUrl,  // Usa la URL modificada
-        {
-            redirect: "follow",
-            method: "POST",
-            body: formDataString,
-            headers: {
-                "Content-Type": "text/plain;charset=utf-8",
-            },
-        }
-    )
-    .then(function (response) {
-        // Resto del código...
-    })
-    .catch(function (error) {
-        // Resto del código...
-    });
-});
-// ...
-
-        .then(function (data) {
-          // Display a success message
-          document.getElementById("message").textContent = "Data submitted successfully!";
-          document.getElementById("message").style.display = "block";
-          document.getElementById("message").style.backgroundColor = "green";
-          document.getElementById("message").style.color = "beige";
-          document.getElementById("submit-button").disabled = false;
-          document.getElementById("form").reset();
-
-          setTimeout(function () {
-            document.getElementById("message").textContent = "";
-            document.getElementById("message").style.display = "none";
-          }, 2600);
-        })
-        .catch(function (error) {
-          // Handle errors, you can display an error message here
-          console.error(error);
-          document.getElementById("message").textContent = "An error occurred while submitting the form.";
-          document.getElementById("message").style.display = "block";
+            fetch(
+                scriptUrl, // Usa la URL modificada
+                {
+                    redirect: "follow",
+                    method: "POST",
+                    body: formDataString,
+                    headers: {
+                        "Content-Type": "text/plain;charset=utf-8",
+                    },
+                }
+            )
+                .then(function (response) {
+                    // Resto del código...
+                })
+                .catch(function (error) {
+                    // Resto del código...
+                });
         });
-    });
-  </script>
+    </script>
 </body>
+
 </html>
+
 
     
