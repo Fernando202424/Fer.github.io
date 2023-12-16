@@ -41,12 +41,14 @@
 
         <div class="field">
             <label for="HoraEntrada">Hora de Entrada:</label>
-            <input type="time" name="HoraEntrada">
-        
-            <!-- Agrega un campo para la Hora de Salida -->
-            <label for="HoraSalida">Hora de Salida:</label>
-            <input type="time" name="HoraSalida">
+            <input class="input" type="time" placeholder="Hora de Entrada" name="HoraEntrada">
         </div>
+
+        <div class="field is-flex-direction-column"> <!-- Agrega la clase is-flex-direction-column aquí -->
+            <label for="HoraSalida">Hora de Salida:</label>
+            <input class="input" type="time" placeholder="Hora de Salida" name="HoraSalida">
+        </div>
+
 
         <div class="field">
             <label class="label">Atendencia</label>
